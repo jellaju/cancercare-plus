@@ -48,6 +48,11 @@ Screenshots show an empty app; no real patient records are included.
 
 ![CancerCare+ browser-only architecture](docs/images/architecture.svg)
 
+
+## Companion evaluation project
+
+[Clinical Summary Eval](https://github.com/jellaju/clinical-summary-eval) is a separate offline Python toolkit with synthetic pain records, citation and exact-value checks, 14 unit tests, and reproducible JSON/HTML reports. It demonstrates a possible evaluation foundation for future structured summaries. It is not integrated into this app and does not establish clinical safety or model performance.
+
 ## Run and publish
 Open index.html in a modern browser, or serve this folder with a static HTTP server. For GitHub Pages, upload these files at the repository root, then choose Settings > Pages > Deploy from a branch > main > / (root) > Save. The app works under a repository subpath.
 
