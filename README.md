@@ -1,6 +1,51 @@
 # CancerCare+
 
-A new browser-based companion for breakthrough cancer pain records, optional comfort activities and care-team visit summaries. Plain HTML, CSS and JavaScript; no packages, build step, secrets or external font requests.
+A research-informed web prototype that turns cancer pain experiences into structured records, explainable comfort suggestions, and summaries for care-team conversations.
+
+**Project origin:** Julaluck Tantipaswasin’s Medical Technology research at Mahidol University. **Current implementation:** a browser-local web adaptation created with OpenAI Codex assistance. **Status:** functional prototype, not clinically validated.
+
+## Reviewer guide
+
+Start with the [UI gallery](docs/UI.md) and [architecture](docs/ARCHITECTURE.md). To try the app, download the repository and open `index.html`; no installation, API keys or build step is required.
+
+| What this project demonstrates | Where to look |
+| --- | --- |
+| Translating a healthcare research problem into a usable product | Research foundation and the six-part assessment |
+| Explainable personalization | `recommendation()` in `app.js`; the comfort screen explains its rule |
+| Practical privacy boundaries | Browser-local storage and explicit exports; no automatic clinician sharing |
+| Responsible use of AI development tools | Codex-assisted implementation with documented tests and limitations |
+
+### Problem and approach
+
+Patients and caregivers need a consistent way to describe pain episodes between appointments. CancerCare+ combines structured self-reporting, optional coping activities, and a diary with follow-up scores. It aims to support communication; it does not infer a diagnosis or prescribe treatment.
+
+### AI use and project provenance
+
+The supplied academic research establishes the problem and the original application concept. This web adaptation was developed with OpenAI Codex assistance for implementation, documentation and verification. The app itself does **not** call an OpenAI API or use a language model: its personalization is a deterministic rule. No model-performance results or clinical outcomes are claimed.
+
+### Next development steps
+
+- Conduct clinician review and patient/caregiver usability testing.
+- Reassess storage, consent and authentication before collecting real patient data.
+- Add a reviewed automated browser test suite and accessibility audit.
+- Evaluate any future AI-assisted summary feature separately, using synthetic data first, explicit consent, grounded outputs and clinician review. This is a proposal, not an implemented feature.
+
+## UI preview and architecture
+
+Explore the app without running it:
+
+- [UI gallery: overview, assessment, comfort activities and insights](docs/UI.md)
+- [Architecture and data flow](docs/ARCHITECTURE.md)
+
+### App overview
+
+<img src="docs/images/ui-overview.webp" alt="CancerCare+ overview with no patient records" width="380">
+
+Screenshots show an empty app; no real patient records are included.
+
+### Current architecture
+
+![CancerCare+ browser-only architecture](docs/images/architecture.svg)
 
 ## Run and publish
 Open index.html in a modern browser, or serve this folder with a static HTTP server. For GitHub Pages, upload these files at the repository root, then choose Settings > Pages > Deploy from a branch > main > / (root) > Save. The app works under a repository subpath.
@@ -15,7 +60,7 @@ Source documents informed these requirements:
 - Thesis PDF pp. 40–41: limitations and need for clinician review and usability evaluation.
 - Presentation pp. 11, 33–36: assessment parameters, medication records and core feature set.
 
-The implementation is independently authored. No PDFs, screenshots, student identifiers, signatures, or original research assets are included in this repository. This is not the original FlutterFlow code, an endorsement by the university, or a clinically validated reproduction.
+The implementation is independently authored. No source PDFs, research screenshots, student identifiers, signatures, or original research assets are included in this repository. App screenshots in docs/images are generated from this web implementation. This is not the original FlutterFlow code, an endorsement by the university, or a clinically validated reproduction.
 
 ## Implemented
 Six assessment areas: intensity/timing; location/character; pattern/triggers; medication record; symptoms/daily life; comfort activity/notes. Includes patient/caregiver attribution, event timestamps, follow-up scores, diary filtering, per-event plot, seven-day summary, CSV export, print visit summary, care-plan notes, optional timed comfort exercises, and explicit local-data deletion.
@@ -44,4 +89,4 @@ styles.css — responsive styling, reduced-motion and print support
 app.js — persistence, summaries, personalization and interactions
 
 ## Verification
-JavaScript syntax and targeted logic checks cover filtering, averages, personalization, HTML escaping, CSV serialization and storage failure handling. Browser verification is documented in the delivery message. Not clinically validated.
+JavaScript syntax and targeted logic checks cover filtering, averages, personalization, HTML escaping, CSV serialization and storage failure handling. Browser checks confirmed assessment saving, anxiety-based highlighting, follow-up persistence after reload, and desktop/mobile layouts. CSV serialization was checked in code; the browser download check timed out and remains unverified end to end. Not clinically validated.

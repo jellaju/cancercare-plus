@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">CancerCare+ current web architecture</title><desc id="desc">Static source files load into the user's browser. The interface uses JavaScript for validation, state, summaries and optional comfort suggestions. Records stay in browser localStorage. CSV and print summaries leave the browser only through user action. There is no application backend or clinical monitoring.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#157c83" stroke-width="1.5"/></marker><style>text{font-family:Segoe UI,Arial,sans-serif;fill:#193b40}.small{font-size:16px;fill:#647b7e}.label{font-size:14px;fill:#647b7e}.heading{font-size:21px;font-weight:600}.box{fill:#fff;stroke:#c9dedb;stroke-width:1.5}.arrow{fill:none;stroke:#157c83;stroke-width:2;marker-end:url(#arrow)}</style></defs>
+<rect width="1200" height="820" rx="22" fill="#f7faf9"/>
+<text x="45" y="49" font-size="14" letter-spacing="2" fill="#157c83">CANCERCARE+ / TECHNICAL OVERVIEW</text>
+<text x="45" y="94" font-size="33" font-weight="600">A companion that runs in your browser.</text>
+<text x="45" y="127" class="small">Current implementation — static HTML, CSS and JavaScript</text>
+<rect x="40" y="166" width="1120" height="102" rx="15" class="box"/>
+<text x="66" y="200" class="heading">Source repository / static file host</text><text x="66" y="232" class="small">index.html · styles.css · app.js</text>
+<text x="700" y="204" class="small">GitHub stores the source files.</text><text x="700" y="232" class="small">A local server or configured static host serves the app.</text>
+<path d="M600 268 V319" class="arrow"/><text x="619" y="298" class="label">Load app assets</text>
+<rect x="40" y="321" width="1120" height="353" rx="18" fill="#e8f3ef" stroke="#a5cbc3" stroke-dasharray="6 5"/>
+<text x="65" y="353" font-size="14" letter-spacing="1.5">USER'S BROWSER — APPLICATION BOUNDARY</text>
+<rect x="65" y="377" width="300" height="160" rx="13" class="box"/><text x="85" y="413" class="heading">Interface</text><text x="85" y="445" class="small">My day · Pain assessment</text><text x="85" y="473" class="small">Comfort · Insights · Care plan</text><text x="85" y="501" class="small">Patient / caregiver interaction</text>
+<rect x="449" y="377" width="300" height="160" rx="13" class="box"/><text x="470" y="413" class="heading">Application logic</text><text x="470" y="445" class="small">Validate inputs · Manage state</text><text x="470" y="473" class="small">Filter records · Summarize pain</text><text x="470" y="501" class="small">Explain comfort suggestions</text>
+<rect x="834" y="377" width="300" height="160" rx="13" class="box"/><text x="855" y="413" class="heading">Browser localStorage</text><text x="855" y="445" class="small">Pain entries + care-plan notes</text><text x="855" y="473" class="small">cancercare-plus-v1</text><text x="855" y="501" class="small">Unencrypted · Browser-specific</text>
+<path d="M365 449 H443" class="arrow"/><path d="M449 485 H371" class="arrow"/><path d="M749 449 H828" class="arrow"/><path d="M834 485 H755" class="arrow"/>
+<rect x="65" y="563" width="684" height="84" rx="12" fill="#fff" stroke="#c9dedb"/><text x="86" y="596" font-size="18" font-weight="600">Optional comfort rule</text><text x="86" y="626" class="small">Latest anxiety 2–3 → quiet pause; otherwise use saved preference.</text>
+<rect x="834" y="563" width="300" height="84" rx="12" fill="#fff" stroke="#c9dedb"/><text x="854" y="595" font-size="18" font-weight="600">User-controlled outputs</text><text x="854" y="626" class="small">CSV download · Print summary</text>
+<path d="M749 519 L818 575" class="arrow"/>
+<text x="45" y="715" font-size="17" font-weight="600">No app backend, login, cloud sync or automatic clinician sharing.</text>
+<text x="45" y="747" class="small">Education links open external websites only when clicked. Suggestions are optional coping support.</text>
+<text x="45" y="778" class="small">Records are self-reported. This prototype does not diagnose pain or recommend medication doses.</text>
+</svg>
