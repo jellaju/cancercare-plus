@@ -36,6 +36,7 @@ Explore the app without running it:
 
 - [UI gallery: overview, assessment, comfort activities and insights](docs/UI.md)
 - [Architecture and data flow](docs/ARCHITECTURE.md)
+- [Sea x OpenAI: project context and proposed AI direction](docs/HACKATHON.md)
 
 ### App overview
 
